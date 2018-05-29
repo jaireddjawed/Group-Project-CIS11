@@ -46,7 +46,7 @@ print_word proc userword:DWORD
 
 	.while ax < LENGTHOF numberedList ; repeats 5 times
 		printf("%Xh. ", edi) ; print out the nth time the user's input is being printed
-		print userword ; print userword
+		print userword, 13, 10 ; print userword
 		mov edi, [esi+4] ; move to next array value
 		inc ax ; increment ax by 1
 	.endw
